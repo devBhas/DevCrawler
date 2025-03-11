@@ -1,0 +1,44 @@
+# DevCrawler Configuration
+# Author: Bhaskar Dev
+# LinkedIn: https://www.linkedin.com/in/bhaskar-dev/
+
+# Basic Settings
+crawler:
+  max_depth: 5                # Maximum crawl depth
+  max_urls_per_domain: 5000   # Maximum URLs to crawl per domain
+  rate_limit: 20              # Requests per second per domain
+  concurrent_workers: 10      # Number of concurrent workers
+  request_timeout: 30         # Request timeout in seconds
+  respect_robots_txt: false   # Whether to respect robots.txt
+  max_redirect_count: 5       # Maximum number of redirects to follow
+  conn_limit: 50              # Connection pool limit
+  max_retries: 3              # Max retries for failed requests
+
+# Input and Output
+files:
+  input_csv: "input.csv"      # CSV file with websites to crawl
+  logs_dir: "DevCrawler-logs"            # Directory for logs
+  cache_dir: "DevCrawler-cache"          # Directory for cache
+
+# Browser Behavior
+browser:
+  user_agents:                # List of user agents for rotation
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+    - "Mozilla/5.0 (iPad; CPU OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+    - "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Brave/9.0.0.0"
+    - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+  
+  viewports:                  # List of viewport sizes
+    - {width: 1920, height: 1080}
+    - {width: 1440, height: 900}
+    - {width: 1366, height: 768}
+    - {width: 1536, height: 864}
+    - {width: 1280, height: 720}
+    - {width: 360, height: 740}      # Mobile viewport
+    - {width: 414, height: 896}      # iPhone viewport 
