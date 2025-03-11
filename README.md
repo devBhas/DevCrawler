@@ -1,4 +1,4 @@
-# 🕷️ DevCrawler- LLM Friendly Web Crawler & data Scraper.
+# 🕷️ DevCrawler- LLM Friendly Web Crawler & Data Scraper
 
 A high-performance web crawler designed for AI/ML training data collection. DevCrawler transforms web content into clean, structured formats (HTML and Markdown) perfect for training Language Models and AI applications. Built with memory efficiency and concurrent processing in mind, it handles JavaScript-heavy sites using Playwright while implementing smart anti-bot detection measures.
 
